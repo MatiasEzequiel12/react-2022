@@ -9,9 +9,10 @@ import { ListaNoticias } from "../components/Noticia/Noticia";
 import Paginador from "../components/Paginador/Paginador";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import { DEFAULT_IMAGE } from "../libs/constantes";
 
 
-const inicio = () => {
+const Inicio = () => {
     const [noticias, setNoticias] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const [pagina, setPagina] = useState(1);
@@ -50,8 +51,8 @@ const inicio = () => {
             <Container maxWidth='sm'>
                 <div id='busqueda'><Buscador onBuscar={onBuscar}/></div>
                 { isLoading && <Loading /> }
-                { !isLoading && noticias && !hayResultado && <div><h3>No se encontró nada relacionado con "{searchParams.get('query')}".</h3></div> }
-                { noticias && hayResultado && <h3>Está viendo hasta 10 noticias de {totalResultado} resultados.</h3> }
+                { !isLoading && noticias && !hayResultado && <div><img src={DEFAULT_IMAGE} width="120" alt="No hay resultado"/><h3>No se encontró nada relacionado con "{searchParams.get('query')}".</h3></div> }
+                { noticias && hayResultado && <h3>Resultado 10 noticias de {totalResultado} resultados.</h3> }
                 { noticias && <ListaNoticias noticias={noticias} /> }
                 <div id='busqueda'>{ noticias && <Paginador cantidadPaginas={cantidadPaginas} onChange={onCambioPagina} /> }</div>
             </Container>
@@ -61,4 +62,4 @@ const inicio = () => {
 
 };
 
-export default inicio;
+export default Inicio;

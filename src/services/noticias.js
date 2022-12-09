@@ -1,4 +1,4 @@
-const API_KEY = '3a4bc2fe11a04677b20d885746065d2d'
+const API_KEY = '7d693eca882840b592676ffd31d0f872'
 const OMDB_API = 'https://newsapi.org'
 const PAGE_SIZE = '10'
 const LANGUAGE = 'es'

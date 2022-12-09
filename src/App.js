@@ -1,12 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Inicio from './pages/inicio'
+import Inicio from './paginas/Inicio'
 import Error404 from './components/Errores/404';
-import Link from './components/Link';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route
 } from 'react-router-dom';
 
 
@@ -17,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <Error404 />
   },
   {
-    path: "/buscador",
+    path: "/buscar",
     element: <Inicio />,
     errorElement: <Error404 />
   },
@@ -27,10 +25,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
-      {/* INICIO */}
-      <RouterProvider router={router} />
-    </div>
+      <div className="App">
+        <RouterProvider router={router} />
+      </div>
   );
 }
 

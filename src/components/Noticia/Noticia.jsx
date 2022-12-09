@@ -60,11 +60,13 @@ const Noticia = ({
 export const ListaNoticias = ({ noticias }) => {
     return (
       <section style={{
-        display: 'flex',
+        display: 'inline-block',
         flexWrap: 'wrap',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        marginTop: '2px',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        marginTop: '5px',
+        textAlign: 'left',
+        position: 'relative',
       }}>
         {
           noticias.map((noticia) => {

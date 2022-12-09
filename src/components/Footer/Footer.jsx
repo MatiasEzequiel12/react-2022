@@ -1,7 +1,10 @@
+import { COPY } from "../../libs/constantes";
+import "../../style.css"
+
 const Footer = () => {
     return (
             <footer>
-                <h5>Copyright 2022</h5>
+                <img src={COPY} width="20" alt="Logo copyright" /><h5>Copyright 2022</h5>
             </footer>
     )
 };
