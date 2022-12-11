@@ -4,7 +4,7 @@ import "../../style.css"
 const Footer = () => {
     return (
             <footer>
-                <img src={COPY} width="20" alt="Logo copyright" /><h5>Copyright 2022</h5>
+                <center><img src={COPY} width="60" alt="Logo copyright" /><h5>Copyright 2022</h5></center>
             </footer>
     )
 };

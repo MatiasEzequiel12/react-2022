@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { getListadoNoticias } from "../services/noticias";
 import { useSearchParams } from "react-router-dom";
@@ -7,9 +7,9 @@ import Loading from "../components/Loading/Loading";
 import Buscador from "../components/Buscador/Buscador";
 import { ListaNoticias } from "../components/Noticia/Noticia";
 import Paginador from "../components/Paginador/Paginador";
-import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { DEFAULT_IMAGE } from "../libs/constantes";
+import Header from "../components/Header/Header";
 
 
 const Inicio = () => {

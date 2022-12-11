@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { DEFAULT_IMAGE } from '../../libs/constantes';
+import { Grid } from '@mui/material';
 
 
 const Noticia = ({
@@ -29,31 +30,31 @@ const Noticia = ({
 
 
     return (
-      <Card sx={{ width: 250, marginBottom: 10 }}>
+      <Grid item xs={12} md={6}>
+      <Card sx={{ width: 450, marginBottom: 10, }}>
         <CardActionArea onClick={onCardClick}>
           <CardMedia
             component="img"
-            height="140"
             width={250}
             image={noticia.urlToImage  === 'NA' ? DEFAULT_IMAGE : noticia.urlToImage}
             alt={noticia.title}
           />
-          <CardContent>
+          
+          <CardContent sx={{ flex:0}}>
             <Typography variant="body2" color="text.secondary">
               {noticia.source.name}
             </Typography>
             <Typography gutterBottom variant="h5" component="div">
               {noticia.title}
             </Typography>
-            {/*<Typography variant="body2" color="text.secondary">
-                {noticia.description}
-    </Typography>*/}
             <Typography variant="subtitle1" color="text.secondary">
                 {formatoFecha(noticia.publishedAt)}
             </Typography>
           </CardContent>
+          
         </CardActionArea>
       </Card>
+      </Grid>
     )
 }
 

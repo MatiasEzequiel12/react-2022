@@ -14,7 +14,7 @@ const Buscador = ({ onBuscar }) => {
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Buscar noticia (más de 3 caracteres)"
+        placeholder="Ingresar más de 3 caracteres"
         inputProps={{ 'aria-label': 'search google maps' }}
         value={criterioBusqueda}
         role="searchbox"
@@ -26,11 +26,6 @@ const Buscador = ({ onBuscar }) => {
         type="button"
         sx={{ p: '20px' }}
         aria-label="search"
-        onSubmit={() => {
-          if (criterioBusqueda.length > 3) {
-            onBuscar(criterioBusqueda)
-          }
-        }}
         onClick={() => {
           if (criterioBusqueda.length > 3) {
             onBuscar(criterioBusqueda)

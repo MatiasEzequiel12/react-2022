@@ -4,7 +4,7 @@ const Paginador = ({
     cantidadPaginas,
     onChange
 }) => {
-    const cambiaPagina = (evento, pagina) => {
+    const cambiaPagina = (_evento, pagina) => {
         onChange(pagina);
         window.scroll({
             top: 0, 
@@ -16,7 +16,8 @@ const Paginador = ({
     return (
         <Pagination
             count={cantidadPaginas}
-            color="secondary"
+            variant="outlined"
+            color="primary"
             onChange={cambiaPagina}
         />
     );
