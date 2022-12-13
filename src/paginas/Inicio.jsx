@@ -48,7 +48,7 @@ const Inicio = () => {
     return (
         <div>
             <Header />
-            <Container maxWidth='sm'>
+            <Container maxWidth='xl'>
                 <div id='busqueda'><Buscador onBuscar={onBuscar}/></div>
                 { isLoading && <Loading /> }
                 { !isLoading && noticias && !hayResultado && <div><img src={DEFAULT_IMAGE} width="120" alt="No hay resultado"/><h3>No se encontró nada relacionado con "{searchParams.get('query')}".</h3></div> }

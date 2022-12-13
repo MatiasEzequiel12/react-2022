@@ -22,7 +22,7 @@ const Buscador = ({ onBuscar }) => {
           setCriterioBusqueda(e.target.value)
         }}
       />
-      <IconButton
+      <IconButton 
         type="button"
         sx={{ p: '20px' }}
         aria-label="search"

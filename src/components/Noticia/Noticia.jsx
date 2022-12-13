@@ -8,6 +8,7 @@ import { DEFAULT_IMAGE } from '../../libs/constantes';
 import { Grid } from '@mui/material';
 
 
+
 const Noticia = ({
   noticia,
   onChange
@@ -65,7 +66,7 @@ export const ListaNoticias = ({ noticias }) => {
         flexWrap: 'wrap',
         flexDirection: 'column',
         justifyContent: 'center',
-        marginTop: '5px',
+        marginTop: '20px',
         textAlign: 'left',
         position: 'relative',
       }}>
@@ -75,6 +76,7 @@ export const ListaNoticias = ({ noticias }) => {
         })
         }
       </section>
+
     )
 }
 
