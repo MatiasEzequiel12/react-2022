@@ -1,9 +1,10 @@
-import { LOGO } from "../../libs/constantes";
 import "../../style.css"
+import './Header.css';
+import {BANNER} from "../../libs/constantes";
 
 const Header = () => {
     return (
-            <header><img src={LOGO} width="60" alt="Logo de noticias"/> <h5>Notice Informative</h5>
+            <header><img className="ImgLogo" src={BANNER} height="120" alt="Logo de noticias"/>
             </header>
     )
 };

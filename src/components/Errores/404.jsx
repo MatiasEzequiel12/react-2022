@@ -1,6 +1,8 @@
+import {ERROR404} from "../../libs/constantes";
+
 const Error404 = () => <div><p style={{
     textAlign:'center',
     display:'block',
-}}><img src="https://www.lucushost.com/blog/wp-content/uploads/2018/05/error-404-que-es-como-solucionarlo.png" alt=""></img></p></div>;
+}}><img src={ERROR404} alt=""></img><ul><h4>Pagina no encontrada</h4></ul></p></div>;
 
 export default Error404;

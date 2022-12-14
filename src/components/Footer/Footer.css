@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    bottom: 2%;
+    width: 100%;
+    height: 5%;
+    margin-top: 10px;
+    flex: 0 0 auto;
+    position:fixed;
+    background-color: 
+    #cfd8dc;
+}
+
+.FooterText {
+    margin-left: 35%;
+    font-family: sans-serif;
+}
