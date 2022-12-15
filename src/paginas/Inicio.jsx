@@ -21,17 +21,16 @@ const Inicio = () => {
     const [totalResultado, setTotalResultado] = useState(0);
     const [hayResultado, setHayResultado] = useState(false)
 
-    const buscarNoticias = async (pagina) => {
-        setIsLoading(true);        
-        const {Search: _status, articles, totalResults} = await getListadoNoticias(searchParams.get('query'), pagina);
-        setNoticias(articles);
-        setTotalResultado(totalResults)
-        setHayResultado(Boolean(totalResults))
-        setCantidadPaginas(Math.ceil(parseInt(totalResults)/10));
-        setIsLoading(false);
-    }
-
     useEffect(() => {
+        const buscarNoticias = async (pagina) => {
+            setIsLoading(true);        
+            const {articles, totalResults} = await getListadoNoticias(searchParams.get('query'), pagina);
+            setNoticias(articles);
+            setTotalResultado(totalResults)
+            setHayResultado(Boolean(totalResults))
+            setCantidadPaginas(Math.ceil(parseInt(totalResults)/10));
+            setIsLoading(false);
+        }
         if (searchParams.get('query')) {
             buscarNoticias(pagina)
         }
